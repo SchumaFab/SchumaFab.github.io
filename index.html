@@ -9,6 +9,21 @@
     <title>Live Communication</title>
 </head>
 <body>
+    <script type="text/javascript">
+        function updateTime() {
+            var date = new Date();
+            var tag = date.getDate();
+            var monatDesJahres = date.getMonth();
+            var jahr = date.getFullYear();
+            var tagInWoche = date.getDay();
+            var wochentag = new Array("Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag");
+            var monat = new Array("Januar", "Februar", "M&auml;rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember");
+            var datum = wochentag[tagInWoche] + ", " + tag + ". " + monat[monatDesJahres] + " " + jahr;
+            document.getElementById('time').innerHTML = datum;
+            setTimeout(updateTime, 3600000);
+        }
+        window.addEventListener("load", updateTime);
+        </script>
     <!-- Templates -->
     <template>
 
@@ -17,7 +32,7 @@
     <!-- Header -->
     <header><hr>
         <div class="header-kopfleiste-grid">
-            <p class="header-kopfleiste-grid-date">Datum: </p>
+            <p class="header-kopfleiste-grid-date" id="time"></p>
             <h1 class="header-kopfleiste-grid-oben">Communication</h1>
             <h2 class="header-kopfleiste-grid-links">Kuschelbär</h2>
             <h2 class="header-kopfleiste-grid-rechts">Kuschelmaus</h2>
