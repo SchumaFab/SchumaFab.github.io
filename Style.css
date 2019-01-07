@@ -1,0 +1,167 @@
+/* Grund styling */
+Body{
+    background-color: rgba(54, 167, 39, 0.253);
+}
+
+header{
+    position: relative;
+    top: 0px;
+    color: black;
+}
+
+main{
+    grid-template-columns: 40% 20% 40%;
+    grid-auto-rows: auto;
+    display: grid;
+}
+
+footer{
+    
+}
+
+h1.header-kopfleiste-grid-oben{
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    text-align: center;
+    margin: 0;
+}
+
+h2.header-kopfleiste-grid-links{
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+}
+
+h2.header-kopfleiste-grid-rechts{
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+}
+
+.header-kopfleiste-grid-date{
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    margin: 0;
+}
+
+p{
+    text-align: center;
+}
+
+/* DIV´s */
+/* DIV´s Classes */
+.header-kopfleiste-grid{
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: auto;
+    display: grid;
+    position: relative;
+}
+
+.main-textinhalt-fabian{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+}
+
+.main-textinhalt-rebecca{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.main-inhaltdatum-datum{
+    grid-column: 2;
+    grid-row: 1;
+}
+/* DIV´s id´s */
+
+
+/* Article */
+/* Article Classes */
+/* Article id´s */
+
+@media screen and (max-width: 359px) , screen and (max-height: 600px) {  
+/* Grund styling */
+Body{
+    background-color: red;
+}
+
+header{
+    position: relative;
+    top: 0px;
+    color: black;
+}
+
+main{
+    grid-template-columns: 40% 20% 40%;
+    grid-auto-rows: auto;
+    display: grid;
+}
+
+footer{
+
+}
+
+h1.header-kopfleiste-grid-oben{
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    text-align: center;
+    margin: 0;
+}
+
+h2.header-kopfleiste-grid-links{
+    grid-column: 1;
+    grid-row: 3;
+    text-align: center;
+}
+
+h2.header-kopfleiste-grid-rechts{
+    grid-column: 2;
+    grid-row: 3;
+    text-align: center;
+}
+
+.header-kopfleiste-grid-date{
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    margin: 0;
+}
+
+p{
+    text-align: center;
+}
+
+/* DIV´s */
+/* DIV´s Classes */
+.header-kopfleiste-grid{
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: auto;
+    display: grid;
+    position: relative;
+}
+
+.main-textinhalt-fabian{
+    grid-column: 1;
+    grid-row: 1;
+    text-align: center;
+}
+
+.main-textinhalt-rebecca{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.main-inhaltdatum-datum{
+    grid-column: 2;
+    grid-row: 1;
+}
+/* DIV´s id´s */
+
+
+/* Article */
+/* Article Classes */
+/* Article id´s */
+
+
+}  
