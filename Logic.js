@@ -8,7 +8,7 @@ const main_inhalttext_datum = document.querySelector('.main-inhalttext-datum');
 // Einzeiler
 setInterval(() => {
     addNewDiaryEntry();
-}, 68400000);
+}, 50000);
 
 
 // Funktionen
