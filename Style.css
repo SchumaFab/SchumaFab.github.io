@@ -90,6 +90,10 @@ p{
     text-decoration-color: cadetblue;
 }
 
+#main-inputfeld{
+    width: 100%;
+    overflow: scroll;
+}
 
 /* Article */
 /* Article Classes */
