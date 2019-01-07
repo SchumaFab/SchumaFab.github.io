@@ -19,7 +19,7 @@
             var wochentag = new Array("Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag");
             var monat = new Array("Januar", "Februar", "M&auml;rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember");
             var datum = wochentag[tagInWoche] + ", " + tag + ". " + monat[monatDesJahres] + " " + jahr;
-            document.getElementById('time').innerHTML = "Today: " + datum;
+            document.getElementById('time').innerHTML = datum;
             setTimeout(updateTime, 3600000);
         }
         window.addEventListener("load", updateTime);
