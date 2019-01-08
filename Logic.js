@@ -8,7 +8,7 @@ const main_inhalttext_datum = document.querySelector('.main-inhalttext-datum');
 // Einzeiler
 setInterval(() => {
     addNewDiaryEntry();
-}, 20000);
+}, 5000);
 
 
 // Funktionen
@@ -25,9 +25,11 @@ function addNewDiaryEntry(){
     dateField.innerText = dateNow;
     
 
-    document.querySelector(".main-inhalttext-fabian").appendChild(inputField);
     document.querySelector(".main-inhaltdatum-datum").appendChild(dateField);
+    document.querySelector(".main-inhalttext-fabian").appendChild(inputField);
     document.querySelector(".main-inhalttext-rebecca").appendChild(inputField1);
+    
+
 }
 
 function getDate(){
