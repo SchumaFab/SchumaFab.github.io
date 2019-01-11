@@ -10,16 +10,39 @@ header{
     color: black;
 }
 
+label{
+    width: 100%;
+    height: 100%;
+}
+
 main{
     grid-template-columns: 38% 20% 40%;
     grid-auto-rows: auto;
     display: grid;
     top: 45px;
     position: relative;
+    padding-left: 2vw;
 }
 
 footer{
-    
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+
+/* Classes */
+.footer-pTag-Copyright{
+    font-size: 3vw;
 }
 
 #body-header-abschlussstrich{
@@ -52,15 +75,21 @@ h2.header-kopfleiste-grid-rechts{
     grid-row: 1;
     text-align: right;
     margin-top: 0;
+    font-size: 1em;
 
 }
 
-p{
-    text-align: center;
+.saveBtn{
+    width: 20vw;
+    height: 5vh;
+    font-size: 3vw;
 }
 
-/* DIV´s */
-/* DIV´s Classes */
+#main-inhaltdatum-datum-datum{
+    margin-top: 29vh;
+    font-size: 3vw;
+}
+
 .header-kopfleiste-grid{
     grid-template-columns: 50% 50%;
     grid-auto-rows: 15;
@@ -70,20 +99,21 @@ p{
 
 .main-textinhalt-fabian{
     grid-column: 1;
-    grid-row: 1;
-    text-align: center;
+    grid-row: 2;
 }
 
 .main-textinhalt-rebecca{
     grid-column: 3;
-    grid-row: 1;
+    grid-row: 2;
 }
 
 .main-inhaltdatum-datum{
     grid-column: 2;
-    grid-row: 1;
+    grid-row: 2;
+    text-align: center;
 }
-/* DIV´s id´s */
+
+/* ID´s */
 #main-div-datum-style{
     font-size: 13px;
     color: cornflowerblue;
@@ -91,98 +121,73 @@ p{
     text-decoration-color: cadetblue;
 }
 
-#main-inputfeld{
+#main-inhalttext-fabian-inhalt{
     width: 100%;
+    height: 50vh;
+    margin: 5vh 0vh 5vh 0vh;
+    overflow: scroll;
+    border-radius: 10px;
+    text-align: center;
+    overflow: scroll;
+}
+#main-inhalttext-rebecca-inhalt{
+    width: 100%;
+    margin: 5vh 0vh 5vh 0vh;
+    height: 50vh;
+    overflow: scroll;
+    border-radius: 10px;
+    text-align: center;
     overflow: scroll;
 }
 
-/* Article */
-/* Article Classes */
-/* Article id´s */
 
-@media screen and (max-width: 359px) , screen and (max-height: 600px) {  
-/* Grund styling */
-Body{
-    background-color: red;
-}
 
-header{
+/* Dropdown Button */
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Dropdown button on hover & focus */
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
     position: relative;
-    top: 0px;
+    display: inline-block;
+    grid-column: 1 / span 3;
+    grid-row: 1;
+    margin: 0;
+    /* display: flex;
+    justify-content: center; */
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
     color: black;
-}
-
-main{
-    grid-template-columns: 40% 20% 40%;
-    grid-auto-rows: auto;
-    display: grid;
-}
-
-footer{
-
-}
-
-h1.header-kopfleiste-grid-oben{
-    grid-column: 1 / span 2;
-    grid-row: 2;
-    text-align: center;
-    margin: 0;
-}
-
-h2.header-kopfleiste-grid-links{
-    grid-column: 1;
-    grid-row: 3;
-    text-align: center;
-}
-
-h2.header-kopfleiste-grid-rechts{
-    grid-column: 2;
-    grid-row: 3;
-    text-align: center;
-}
-
-.header-kopfleiste-grid-date{
-    grid-column: 2;
-    grid-row: 1;
-    text-align: right;
-    margin: 0;
-    grid-column: 1 / span 2;
-}
-
-p{
-    text-align: center;
-}
-
-/* DIV´s */
-/* DIV´s Classes */
-.header-kopfleiste-grid{
-    grid-template-columns: 50% 50%;
-    grid-auto-rows: 15;
-    display: grid;
-    position: relative;
-}
-
-.main-textinhalt-fabian{
-    grid-column: 1;
-    grid-row: 1;
-    text-align: center;
-}
-
-.main-textinhalt-rebecca{
-    grid-column: 3;
-    grid-row: 1;
-}
-
-.main-inhaltdatum-datum{
-    grid-column: 2;
-    grid-row: 1;
-}
-/* DIV´s id´s */
-
-
-/* Article */
-/* Article Classes */
-/* Article id´s */
-
-
-}  
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd}
+  
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+  .show {display:block;}
