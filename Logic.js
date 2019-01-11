@@ -1,35 +1,26 @@
 'use strict'
 
-// Variablen Deklaration
-const main_inhalttext_fabian = document.querySelector('.main-inhalttext-fabian');
-const main_inhalttext_rebecca = document.querySelector('.main-inhalttext-rebecca');
-const main_inhalttext_datum = document.querySelector('.main-inhalttext-datum');
+let dateNow = getDate();
+document.getElementById('main-inhaltdatum-datum-datum').innerText = dateNow;
 
-// Einzeiler
-setInterval(() => {
-    addNewDiaryEntry();
-}, 5000);
+function writeCookieVorbereitung(){
+    let Datum = getDate();
+    let Name = "Fabian";
+    let myText = document.querySelector("#main-inhalttext-fabian-inhalt").value;
+    writeCookie(Datum, Name, myText);
+}
 
+function writeCookie(Datum, Name, myText){
+    document.cookie = `${Datum}=${myText}`;
+}
 
-// Funktionen
-function addNewDiaryEntry(){
-    let inputField =  document.createElement("input");
-    inputField.setAttribute("type","text");  
-    inputField.setAttribute("id","main-inputfeld"); 
-    let inputField1 =  document.createElement("input");
-    inputField1.setAttribute("type","text");  
-    inputField1.setAttribute("id","main-inputfeld"); 
-    let dateField = document.createElement("p")
-    dateField.setAttribute("type", "text");
-    let dateNow = getDate();
-    dateField.innerText = dateNow;
-    
+function loadCookie(){
+    let cookieContent = document.cookie;
+    cookieContent = cookieContent.split('=');
 
-    document.querySelector(".main-inhaltdatum-datum").appendChild(dateField);
-    document.querySelector(".main-inhalttext-fabian").appendChild(inputField);
-    document.querySelector(".main-inhalttext-rebecca").appendChild(inputField1);
-    
-
+    if(cookieContent[0] == getDate()){
+        document.querySelector("#main-inhalttext-fabian-inhalt").value = cookieContent[1];
+    }
 }
 
 function getDate(){
@@ -43,3 +34,24 @@ function getDate(){
     var datum = tag + "." + (monatDesJahres + 1) + "." + jahr;
     return datum;
 }
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown menu if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
