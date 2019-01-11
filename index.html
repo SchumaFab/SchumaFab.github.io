@@ -4,11 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta author="Schumann Fabian">
-    <script src="./Logic.js"></script>
+    <script src="./Logic.js" defer></script>
     <link rel="stylesheet" href="./Style.css">
     <title>Diary</title>
 </head>
-<body>
+<body onload="loadCookie()">
     <script type="text/javascript">
         function updateTime() {
             var date = new Date();
@@ -34,24 +34,36 @@
         <div class="header-kopfleiste-grid">
             <p class="header-kopfleiste-grid-date" id="time"></p>
             <h1 class="header-kopfleiste-grid-oben">Diary</h1>
-            <h2 class="header-kopfleiste-grid-links">Fabian</h2>
-            <h2 class="header-kopfleiste-grid-rechts">Rebecca</h2>
+            <h2 class="header-kopfleiste-grid-links">Hans</h2>
+            <h2 class="header-kopfleiste-grid-rechts">Herbert</h2>
         </div>
     </header><hr id="body-header-abschlussstrich">
 
     <!-- Body -->
     <main>
-        <div class="main-inhalttext-fabian">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Tag Auswählen</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Day A</a>
+                    <a href="#">Day B</a>
+                    <a href="#">Day C</a>
+                </div>
         </div>
+        <div class="main-inhalttext-fabian">
+            <input id="main-inhalttext-fabian-inhalt" type="text" placeholder="What did u do today?">
+            </div>
         <div class="main-inhaltdatum-datum">
+            <p id="main-inhaltdatum-datum-datum"></p>
         </div>
         <div class="main-inhalttext-rebecca">
+            <input id="main-inhalttext-rebecca-inhalt" type="text" placeholder="What did u do today?">
         </div>
+        <button class="saveBtn" onclick="writeCookieVorbereitung()">speichern</button>
     </main>
     
     <!-- Footer -->
     <footer>
-        
+        <p class="footer-pTag-Copyright">© Copyright 2019 FSH. All rights reserved.</p>
     </footer>
 </body>
 </html>
