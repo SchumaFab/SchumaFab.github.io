@@ -3,15 +3,18 @@
 let dateNow = getDate();
 document.getElementById('main-inhaltdatum-datum-datum').innerText = dateNow;
 
-function writeCookieVorbereitung(){
+function writeCookieVorbereitung(Name){
     let Datum = getDate();
-    let Name = "Fabian";
     let myText = document.querySelector("#main-inhalttext-fabian-inhalt").value;
-    writeCookie(Datum, Name, myText);
+
+    if(Name === "Rebecca"){
+        myText = document.querySelector("#main-inhalttext-rebecca-inhalt").value;
+    }
+        writeCookie(Datum, Name, myText);
 }
 
 function writeCookie(Datum, Name, myText){
-    document.cookie = `${Datum}=${myText}`;
+    document.cookie = `${Datum + "!" + Name}=${myText}`;
 }
 
 function loadCookie(){
