@@ -145,7 +145,6 @@ h2.header-kopfleiste-grid-rechts{
     overflow: scroll;
     border-radius: 10px;
     text-align: center;
-    overflow: scroll;
 }
 
 
@@ -212,7 +211,7 @@ h2.header-kopfleiste-grid-rechts{
 
     }
   }
-  @media only screen and (min-height: 650px) {
+  @media only screen and (min-height: 670px) {
     body {
       display: none;
       background-color: white;
