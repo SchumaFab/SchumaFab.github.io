@@ -204,3 +204,18 @@ h2.header-kopfleiste-grid-rechts{
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
+
+  @media only screen and (min-width: 400px) {
+    body {
+      display: none;
+      background-color: white;
+
+    }
+  }
+  @media only screen and (min-height: 650px) {
+    body {
+      display: none;
+      background-color: white;
+
+    }
+  }
