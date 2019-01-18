@@ -33,7 +33,7 @@
     <header><hr>
         <div class="header-kopfleiste-grid">
             <p class="header-kopfleiste-grid-date" id="time"></p>
-            <h1 class="header-kopfleiste-grid-oben">Diary</h1>
+            <h1 class="header-kopfleiste-grid-oben">Web Diary</h1>
             <h2 class="header-kopfleiste-grid-links">Fabian</h2>
             <h2 class="header-kopfleiste-grid-rechts">Rebecca</h2>
         </div>
@@ -50,20 +50,21 @@
                 </div>
         </div>
         <div class="main-inhalttext-fabian">
-            <input id="main-inhalttext-fabian-inhalt" type="text" placeholder="What did u do today?">
+            <Textarea id="main-inhalttext-fabian-inhalt" placeholder="Was hast du heute getan..?" name="nachricht" cols=100></textarea>
             </div>
         <div class="main-inhaltdatum-datum">
             <p id="main-inhaltdatum-datum-datum"></p>
         </div>
         <div class="main-inhalttext-rebecca">
-            <input id="main-inhalttext-rebecca-inhalt" type="text" placeholder="What did u do today?">
-        </div>
-        <button class="saveBtn" onclick="writeCookieVorbereitung()">speichern</button>
+            <Textarea id="main-inhalttext-rebecca-inhalt" placeholder="Was hast du heute getan..?" name="nachricht" cols=100></textarea>
+            </div>
+        <button class="saveBtn" onclick="writeCookieVorbereitung('Fabian')">speichern</button>
+        <button class="saveBtn rbtn" onclick="writeCookieVorbereitung('Rebecca')">speichern</button>
     </main>
     
     <!-- Footer -->
     <footer>
-        <p class="footer-pTag-Copyright">© Copyright 2019 FSH. All rights reserved.</p>
+        <!-- <p class="footer-pTag-Copyright">© Copyright 2019 FSH. All rights reserved.</p> -->
     </footer>
 </body>
 </html>
