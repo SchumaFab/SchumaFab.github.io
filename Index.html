@@ -1,0 +1,70 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta author="Schumann Fabian">
+    <script src="./Logic.js" defer></script>
+    <link rel="stylesheet" href="./Style.css">
+    <title>Diary</title>
+</head>
+<body onload="loadCookie()">
+    <script type="text/javascript">
+        function updateTime() {
+            var date = new Date();
+            var tag = date.getDate();
+            var monatDesJahres = date.getMonth();
+            var jahr = date.getFullYear();
+            var tagInWoche = date.getDay();
+            var wochentag = new Array("Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag");
+            var monat = new Array("Januar", "Februar", "M&auml;rz", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember");
+            var datum = wochentag[tagInWoche] + ", " + tag + ". " + monat[monatDesJahres] + " " + jahr;
+            document.getElementById('time').innerHTML = datum;
+            setTimeout(updateTime, 3600000);
+        }
+        window.addEventListener("load", updateTime);
+        </script>
+    <!-- Templates -->
+    <template>
+
+    </template>
+
+    <!-- Header -->
+    <header><hr>
+        <div class="header-kopfleiste-grid">
+            <p class="header-kopfleiste-grid-date" id="time"></p>
+            <h1 class="header-kopfleiste-grid-oben">Web Diary</h1>
+            <h2 class="header-kopfleiste-grid-links">Fabian</h2>
+            <h2 class="header-kopfleiste-grid-rechts">Rebecca</h2>
+        </div>
+    </header><hr id="body-header-abschlussstrich">
+
+    <!-- Body -->
+    <main>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Tag Auswählen</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="#">Day A</a>
+                    <a href="#">Day B</a>
+                    <a href="#">Day C</a>
+                </div>
+        </div>
+        <div class="main-inhalttext-fabian">
+            <Textarea id="main-inhalttext-fabian-inhalt" placeholder="Was hast du heute getan..?" name="nachricht" cols=100></textarea>
+            </div>
+        <div class="main-inhaltdatum-datum">
+            <p id="main-inhaltdatum-datum-datum"></p>
+        </div>
+        <div class="main-inhalttext-rebecca">
+            <Textarea id="main-inhalttext-rebecca-inhalt" placeholder="Was hast du heute getan..?" name="nachricht" cols=100></textarea>
+            </div>
+        <button class="saveBtn" onclick="writeCookieVorbereitung('Fabian')">speichern</button>
+        <button class="saveBtn rbtn" onclick="writeCookieVorbereitung('Rebecca')">speichern</button>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <!-- <p class="footer-pTag-Copyright">© Copyright 2019 FSH. All rights reserved.</p> -->
+    </footer>
+</body>
+</html>

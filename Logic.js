@@ -7,23 +7,31 @@ function writeCookieVorbereitung(Name){
     let Datum = getDate();
     let myText = document.querySelector("#main-inhalttext-fabian-inhalt").value;
 
-    if(Name === "Rebecca"){
+    if(Name === "Rebecca")
         myText = document.querySelector("#main-inhalttext-rebecca-inhalt").value;
-    }
         writeCookie(Datum, Name, myText);
 }
 
 function writeCookie(Datum, Name, myText){
     document.cookie = `${Datum + "!" + Name}=${myText}`;
+    loadCookie();
 }
 
 function loadCookie(){
-    let cookieContent = document.cookie;
-    cookieContent = cookieContent.split('=');
-
-    if(cookieContent[0] == getDate()){
-        document.querySelector("#main-inhalttext-fabian-inhalt").value = cookieContent[1];
-    }
+    let MyCookies = document.cookie;
+    MyCookies = MyCookies.split(";");
+    MyCookies.forEach(element => {
+        let myText = element.split("!");
+        myText[0] = myText[0].replace(" ","");
+        if(myText[0] == getDate()){
+            let message = myText[1].split("=");
+            if(message[0] == "Rebecca"){
+                document.querySelector("#main-inhalttext-rebecca-inhalt").value = message[1];
+            }
+            else{
+                document.querySelector("#main-inhalttext-fabian-inhalt").value = message[1];
+            } 
+        }});
 }
 
 function getDate(){

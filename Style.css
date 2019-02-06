@@ -1,7 +1,11 @@
 /* Grund styling */
 Body{
-    background-color: rgba(54, 167, 39, 0.253);
+    background-color: rgba(39, 167, 156, 0.253);
     overflow: scroll;
+    background-image: url("https://images.pexels.com/photos/1535162/pexels-photo-1535162.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    margin: 0;
 }
 
 header{
@@ -16,12 +20,14 @@ label{
 }
 
 main{
-    grid-template-columns: 38% 20% 40%;
-    grid-auto-rows: 50%;
+    grid-template-columns: 38% 20% 38%;
+    grid-auto-rows: 25px auto;
+    grid-gap: 1vh;
     display: grid;
-    top: 45px;
+    bottom: 15px;
     position: relative;
-    padding-left: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw; 
 }
 
 /* footer{ 
@@ -48,7 +54,7 @@ p{
 #body-header-abschlussstrich{
     width: 95%;
     position: relative;
-    top: 40px;
+    bottom: 20px;
 }
 
 h1.header-kopfleiste-grid-oben{
@@ -80,6 +86,9 @@ h2.header-kopfleiste-grid-rechts{
 }
 
 .saveBtn{
+    background-color: rgba(255,165,79,1);
+    color: black;
+    font-weight: bold;
     width: 20vw;
     height: 5vh;
     font-size: 3vw;
@@ -90,12 +99,14 @@ h2.header-kopfleiste-grid-rechts{
 }
 
 .rbtn{
-    margin-left: 26vw;
+    margin-left: 30vw;
 }
 
 #main-inhaltdatum-datum-datum{
-    margin-top: 29vh;
-    font-size: 4vw;
+    margin-top: 25vh;
+    font-size: bold;
+    background-color: black;
+    color: rgba(255,165,79,1);
 }
 
 .header-kopfleiste-grid{
@@ -137,6 +148,9 @@ h2.header-kopfleiste-grid-rechts{
     border-radius: 10px;
     text-align: center;
     overflow: scroll;
+    background-color: rgba(255,165,79,0.80);
+    color: black;
+    font-weight: bold;
 }
 #main-inhalttext-rebecca-inhalt{
     width: 100%;
@@ -145,18 +159,22 @@ h2.header-kopfleiste-grid-rechts{
     overflow: scroll;
     border-radius: 10px;
     text-align: center;
+    background-color: rgba(255,165,79,0.80);
+    color: black;
+    font-weight: bold;
 }
 
 
 
 /* Dropdown Button */
 .dropbtn {
-    background-color: #3498DB;
+    background-color: rgba(255,165,79,1);
     height: 5vh;
     width: 30vw;
-    color: white;
+    color: black;
+    font-weight: bold;
     font-size: 3vw;
-    margin: 0vh 0vw 0vh 30vw;
+    margin: 0vh 0vw 0vh 34vw;
     border: none;
     cursor: pointer;
     border-radius: 30px;
@@ -182,11 +200,11 @@ h2.header-kopfleiste-grid-rechts{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: rgba(255,165,79,1);
     min-width: 30vw;
     border-radius: 30px;
-    margin-left: 30vw;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: 34vw;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
     z-index: 1;
   }
   
@@ -199,7 +217,7 @@ h2.header-kopfleiste-grid-rechts{
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd}
+  .dropdown-content a:hover {background-color: rgba(255,165,79,1);}
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
