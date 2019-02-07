@@ -163,27 +163,6 @@ h2.header-kopfleiste-grid-rechts{
     color: black;
     font-weight: bold;
 }
-
-
-
-/* Dropdown Button */
-.dropbtn {
-    background-color: rgba(255,165,79,1);
-    height: 5vh;
-    width: 30vw;
-    color: black;
-    font-weight: bold;
-    font-size: 3vw;
-    margin: 0vh 0vw 0vh 34vw;
-    border: none;
-    cursor: pointer;
-    border-radius: 30px;
-  }
-  
-  /* Dropdown button on hover & focus */
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-  }
   
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
@@ -192,22 +171,25 @@ h2.header-kopfleiste-grid-rechts{
     grid-column: 1 / span 3;
     grid-row: 1;
     margin: 0;
-    /* display: flex;
-    justify-content: center; */
+    min-width: auto;
   }
   
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(255,165,79,1);
+    background-color: rgb(243, 233, 233);
     min-width: 30vw;
     border-radius: 30px;
-    margin-left: 34vw;
     box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
     z-index: 1;
   }
   
+  .dropbtn{
+      text-align: left;
+      margin: 0;
+  }
+
   /* Links inside the dropdown */
   .dropdown-content a {
     color: black;
@@ -217,22 +199,103 @@ h2.header-kopfleiste-grid-rechts{
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: rgba(255,165,79,1);}
+  .dropdown-content a:hover {
+      background-color: grey;
+      border-radius: 50px;
+    }
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
 
-  @media only screen and (min-width: 400px) {
+  footer{
+   grid-template-columns: 25%;
+   grid-template-rows: auto;
+   display: grid;
+  }
+
+  @media only screen and (min-width: 2000px) {
+    main{
+        grid-template-columns: 38% 20% 38%;
+        grid-auto-rows: 25px auto;
+        grid-gap: 1vh;
+        display: grid;
+        bottom: 15px;
+        position: relative;
+        margin-left: 1vw;
+        margin-right: 1vw; 
+    }
+      }
+  @media only screen and (min-height: 1500px) {
     body {
       display: none;
       background-color: white;
-
     }
   }
-  @media only screen and (min-height: 670px) {
-    body {
-      display: none;
-      background-color: white;
 
+  @media (min-width: 550px){
+      .dropbtn{
+        font-size: 20px;
+        max-width: 30vw;
+      }
+      .saveBtn{
+        font-size: 20px;
+        width: 150px;
+      }
+      .header-kopfleiste-grid-date,#main-inhalttext-rebecca-inhalt,#main-inhalttext-fabian-inhalt,#main-inhaltdatum-datum-datum,a{
+        font-size: 20px;
+      }
+      h2,h1{
+        font-size: 40px;
+      }
+  }
+  @media (max-height: 450px){
+        .dropbtn{
+            height: 20px;
+        }
     }
+
+
+/* Copy */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(175, 146, 146); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+#changeButton{
+    border-radius: 50px;
+    background-color: rgb(161, 207, 150);
+}
+
+  /* Modal Content/Box */
+  .modal-content {
+    border-radius: 50px;
+    background-color: rgb(243, 233, 233);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
   }

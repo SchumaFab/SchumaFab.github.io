@@ -33,20 +33,19 @@
     <header><hr>
         <div class="header-kopfleiste-grid">
             <p class="header-kopfleiste-grid-date" id="time"></p>
-            <h1 class="header-kopfleiste-grid-oben">Web Diary</h1>
-            <h2 class="header-kopfleiste-grid-links">Fabian</h2>
-            <h2 class="header-kopfleiste-grid-rechts">Rebecca</h2>
+            <h1 class="header-kopfleiste-grid-oben">Web Diary📔</h1>
+            <h2 class="header-kopfleiste-grid-links">Fabian🤵🏼<img src="" alt="" srcset=""></h2>
+            <h2 class="header-kopfleiste-grid-rechts">Rebecca👰🏼</h2>
         </div>
     </header><hr id="body-header-abschlussstrich">
 
     <!-- Body -->
     <main>
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Tag Auswählen</button>
+            <p onclick="myFunction()" class="dropbtn">⚙️</p>
                 <div id="myDropdown" class="dropdown-content">
-                    <a href="#">Day A</a>
-                    <a href="#">Day B</a>
-                    <a href="#">Day C</a>
+                    <a onclick="changeColor()">Change Color</a>
+                    <a >coming soon</a>
                 </div>
         </div>
         <div class="main-inhalttext-fabian">
@@ -64,7 +63,15 @@
     
     <!-- Footer -->
     <footer>
-        <!-- <p class="footer-pTag-Copyright">© Copyright 2019 FSH. All rights reserved.</p> -->
+
+<!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <input type="color" name="" id="colorID">
+        <button onclick="closeModal()" id="changeButton">Change</button>
+        </div>
+    </div>
     </footer>
 </body>
 </html>

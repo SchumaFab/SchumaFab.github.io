@@ -66,3 +66,39 @@ function myFunction() {
       }
     }
   }
+
+function closeModal(){
+    modal.style.display = "none";
+    let wishColor = document.getElementById("colorID").value;
+
+    const hexToRgb = hex =>
+    hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i
+               ,(m, r, g, b) => '#' + r + r + g + g + b + b)
+      .substring(1).match(/.{2}/g)
+      .map(x => parseInt(x, 16))  
+
+    let rgbwishColor = hexToRgb(wishColor);
+    console.log(rgbwishColor); 
+      
+
+    document.querySelector('.savebtn').style.background = wishColor;
+    document.querySelector('.rbtn').style.background = wishColor;
+    document.querySelector('#main-inhalttext-rebecca-inhalt').style.background = wishColor;
+    document.querySelector('#main-inhalttext-fabian-inhalt').style.background = wishColor;    
+    document.querySelector('#main-inhaltdatum-datum-datum').style.background = wishColor;
+}
+
+  // Get the modal
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
+function changeColor() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
