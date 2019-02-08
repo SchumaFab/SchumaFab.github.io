@@ -103,8 +103,8 @@ function closeModal(){
     document.querySelector('#main-inhalttext-rebecca-inhalt').style.background = wishColor;
     document.querySelector('#main-inhalttext-fabian-inhalt').style.background = wishColor;    
     document.querySelector('#main-inhaltdatum-datum-datum').style.background = wishColor;
-    document.querySelector('#main-inhalttext-rebecca-inhalt').style.opacity = "0.8";
-    document.querySelector('#main-inhalttext-fabian-inhalt').style.opacity = "0.8";
+    document.querySelector('#main-inhalttext-rebecca-inhalt').style.opacity = "0.7";
+    document.querySelector('#main-inhalttext-fabian-inhalt').style.opacity = "0.7";
 }
 
 function Brightness(r, g, b)
