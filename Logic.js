@@ -77,16 +77,48 @@ function closeModal(){
       .substring(1).match(/.{2}/g)
       .map(x => parseInt(x, 16))  
 
-    let rgbwishColor = hexToRgb(wishColor);
-    console.log(rgbwishColor); 
-      
+    let RGBcolor = hexToRgb(wishColor);
+    let BrightnessWERT = Brightness(RGBcolor[0],RGBcolor[1],RGBcolor[2]);
+    if(BrightnessWERT > 130){ //Entspricht hell
+      document.body.style.backgroundImage = "url('https://images.pexels.com/photos/556670/pexels-photo-556670.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')";
+      let light = "black";
+      document.querySelector('.savebtn').style.color = light;
+      document.querySelector('.rbtn').style.color = light;
+      document.querySelector('#main-inhalttext-rebecca-inhalt').style.color = light;
+      document.querySelector('#main-inhalttext-fabian-inhalt').style.color = light;    
+      document.querySelector('#main-inhaltdatum-datum-datum').style.color = light;
+      }
+    else if(BrightnessWERT <= 130){ //Entspricht dunkel
+      document.body.style.backgroundImage = "url('https://images.pexels.com/photos/1624360/pexels-photo-1624360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500')";
+      let dark = "white";
+      document.querySelector('.savebtn').style.color = dark;
+      document.querySelector('.rbtn').style.color = dark;
+      document.querySelector('#main-inhalttext-rebecca-inhalt').style.color = dark;
+      document.querySelector('#main-inhalttext-fabian-inhalt').style.color = dark;    
+      document.querySelector('#main-inhaltdatum-datum-datum').style.color = dark;  
+    }
 
     document.querySelector('.savebtn').style.background = wishColor;
     document.querySelector('.rbtn').style.background = wishColor;
     document.querySelector('#main-inhalttext-rebecca-inhalt').style.background = wishColor;
     document.querySelector('#main-inhalttext-fabian-inhalt').style.background = wishColor;    
     document.querySelector('#main-inhaltdatum-datum-datum').style.background = wishColor;
+    document.querySelector('#main-inhalttext-rebecca-inhalt').style.opacity = "0.8";
+    document.querySelector('#main-inhalttext-fabian-inhalt').style.opacity = "0.8";
 }
+
+function Brightness(r, g, b)
+    {
+       return Math.sqrt(
+          r * r * .241 + 
+          g * g * .691 + 
+          b * b * .068);
+    }
+
+function resetFunc(){
+  alert("Did you saved your Changes?");
+}
+
 
   // Get the modal
 var modal = document.getElementById('myModal');

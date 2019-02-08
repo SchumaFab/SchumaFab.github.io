@@ -32,6 +32,7 @@
     <!-- Header -->
     <header><hr>
         <div class="header-kopfleiste-grid">
+            <p onclick="myFunction()" class="dropbtn">⚙️</p>
             <p class="header-kopfleiste-grid-date" id="time"></p>
             <h1 class="header-kopfleiste-grid-oben">Web Diary📔</h1>
             <h2 class="header-kopfleiste-grid-links">Fabian🤵🏼<img src="" alt="" srcset=""></h2>
@@ -42,10 +43,9 @@
     <!-- Body -->
     <main>
         <div class="dropdown">
-            <p onclick="myFunction()" class="dropbtn">⚙️</p>
                 <div id="myDropdown" class="dropdown-content">
-                    <a onclick="changeColor()">Change Color</a>
-                    <a >coming soon</a>
+                    <a onclick="changeColor()">✅ Change Color</a>
+                    <a id="comingSoonBtn" >❌coming soon</a>
                 </div>
         </div>
         <div class="main-inhalttext-fabian">
@@ -67,11 +67,13 @@
 <!-- The Modal -->
     <div id="myModal" class="modal">
         <div class="modal-content">
-        <span class="close">&times;</span>
-        <input type="color" name="" id="colorID">
-        <button onclick="closeModal()" id="changeButton">Change</button>
+            <span class="close">&times;</span>
+        <p id="colorP">Choose your Color and see the magic!</p>
+        <input type="color" name="" id="colorID" value="#ecab30"></input>
+        <p id="modalP" onclick="closeModal()">✔️</p>
+        <p id="modalPext" onclick="location.reload()">Clear🛠</p>
         </div>
-    </div>
+    </div>  
     </footer>
 </body>
 </html>

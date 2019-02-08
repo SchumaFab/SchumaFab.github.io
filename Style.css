@@ -177,7 +177,9 @@ h2.header-kopfleiste-grid-rechts{
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
     display: none;
-    position: absolute;
+    position: relative;
+    bottom: 115px;
+    width: 50vw;
     background-color: rgb(243, 233, 233);
     min-width: 30vw;
     border-radius: 30px;
@@ -186,6 +188,9 @@ h2.header-kopfleiste-grid-rechts{
   }
   
   .dropbtn{
+      grid-column: 1;
+      grid-row: 1;
+      font-size: 30px;;
       text-align: left;
       margin: 0;
   }
@@ -235,7 +240,6 @@ h2.header-kopfleiste-grid-rechts{
   @media (min-width: 550px){
       .dropbtn{
         font-size: 20px;
-        max-width: 30vw;
       }
       .saveBtn{
         font-size: 20px;
@@ -254,6 +258,25 @@ h2.header-kopfleiste-grid-rechts{
         }
     }
 
+    #comingSoonBtn{
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    #colorP{
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-weight: bold;
+      text-decoration-line: underline;
+    }
+    #modalP{
+      margin: 0;
+      text-align: left;
+    }
+
+    #modalPext{
+      margin: 0;
+      text-align: right;
+    }
 
 /* Copy */
 /* The Modal (background) */
