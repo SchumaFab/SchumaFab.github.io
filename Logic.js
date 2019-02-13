@@ -68,6 +68,7 @@ function myFunction() {
   }
 
 function closeModal(){
+    let closer = document.querySelector('.dropdown');
     modal.style.display = "none";
     let wishColor = document.getElementById("colorID").value;
 
@@ -105,6 +106,8 @@ function closeModal(){
     document.querySelector('#main-inhaltdatum-datum-datum').style.background = wishColor;
     document.querySelector('#main-inhalttext-rebecca-inhalt').style.opacity = "0.7";
     document.querySelector('#main-inhalttext-fabian-inhalt').style.opacity = "0.7";
+
+    document.getElementById("myDropdown").classList.toggle("show");
 }
 
 function Brightness(r, g, b)
@@ -114,11 +117,6 @@ function Brightness(r, g, b)
           g * g * .691 + 
           b * b * .068);
     }
-
-function resetFunc(){
-  alert("Did you saved your Changes?");
-}
-
 
   // Get the modal
 var modal = document.getElementById('myModal');
@@ -134,3 +132,13 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+function getMyDateValue(e) {
+  var dateArr = e.srcElement.value.split('-');
+  let myDate;
+  if (dateArr.length > 1)
+    myDate = dateArr[2] + '.' + dateArr[1] + '.' + dateArr[0];
+
+}
+// Add an event listener to my date field 
+document.getElementById("myDateField").addEventListener("focus", getMyDateValue)
